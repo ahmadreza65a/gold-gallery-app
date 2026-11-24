@@ -1,0 +1,6 @@
+.gradle/
+build/
+app/build/
+local.properties
+.npm-tmp/
+app/src/main/assets/www/libs/

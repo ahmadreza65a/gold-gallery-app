@@ -1,0 +1,543 @@
+/* =====================================================
+   پنل مشتریان گالری طلا و جواهر - تم تیره و طلایی لوکس
+   Bootstrap 5 RTL + Dark Luxury Gold Theme
+   ===================================================== */
+
+:root {
+  --bg-body: #09090b;
+  --bg-phone: #111114;
+  --bg-card: rgba(24, 24, 28, 0.88);
+  --bg-card-hover: rgba(34, 33, 38, 0.95);
+  --gold-light: #f9e3a8;
+  --gold-mid: #dfB45c;
+  --gold-dark: #a67828;
+  --gold-gradient: linear-gradient(135deg, #f8e1a1 0%, #d8aa4f 52%, #b5842b 100%);
+  --gold-border: rgba(223, 180, 92, 0.32);
+  --gold-border-strong: rgba(248, 225, 161, 0.65);
+  --gold-glow: 0 0 22px rgba(223, 180, 92, 0.28);
+  --text-main: #f5f3ee;
+  --text-muted: #a5a198;
+  --danger-soft: rgba(220, 53, 69, 0.16);
+  --success-soft: rgba(40, 199, 111, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at 20% 0%, #1d1911 0%, #09090b 48%, #050507 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* کانتینر اصلی موبایل‌فرست */
+.app-shell {
+  max-width: 440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #141316 0%, #0d0d10 100%);
+  position: relative;
+  padding-bottom: 92px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.85), 0 0 1px 1px rgba(223, 180, 92, 0.18);
+}
+
+@media (min-width: 576px) {
+  body {
+    padding: 18px 0;
+  }
+  .app-shell {
+    min-height: calc(100vh - 36px);
+    border-radius: 34px;
+    border: 1px solid rgba(223, 180, 92, 0.25);
+    overflow: hidden;
+  }
+}
+
+/* افکت نور طلایی پس‌زمینه بالا */
+.ambient-glow {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(223, 180, 92, 0.22) 0%, transparent 72%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app-content {
+  position: relative;
+  z-index: 1;
+  padding: 18px 16px 20px;
+}
+
+/* مدیریت نمایش صفحات */
+.app-page {
+  display: none;
+  animation: fadeSlideIn 0.28s ease;
+}
+.app-page.active {
+  display: block;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* هدر صفحات داخلی */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.page-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin: 0;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: rgba(223, 180, 92, 0.14);
+  border-color: var(--gold-border-strong);
+  box-shadow: var(--gold-glow);
+}
+
+/* کارت طلایی درخشان (Hero Card) */
+.gold-hero-card {
+  background: var(--gold-gradient);
+  color: #16130d;
+  border-radius: 22px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(216, 170, 79, 0.26), inset 0 1px 1px rgba(255, 255, 255, 0.65);
+}
+
+.gold-hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.12) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.12) 25%, transparent 25%);
+  background-size: 28px 28px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.gold-hero-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* کارت شیشه‌ای تیره با حاشیه طلایی */
+.luxury-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 18px;
+  padding: 15px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.luxury-card.clickable {
+  cursor: pointer;
+}
+
+.luxury-card.clickable:hover {
+  border-color: var(--gold-border-strong);
+  background: var(--bg-card-hover);
+  transform: translateY(-1px);
+}
+
+/* دکمه‌های طلایی و شیشه‌ای */
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #17130c;
+  font-weight: 700;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 16px;
+  box-shadow: 0 6px 20px rgba(216, 170, 79, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-gold:hover, .btn-gold:focus {
+  color: #110e08;
+  filter: brightness(1.06);
+  box-shadow: 0 8px 26px rgba(223, 180, 92, 0.45);
+}
+
+.btn-gold-outline {
+  background: rgba(223, 180, 92, 0.07);
+  color: var(--gold-light);
+  font-weight: 600;
+  border: 1px solid var(--gold-border-strong);
+  border-radius: 14px;
+  padding: 11px 16px;
+  transition: all 0.2s ease;
+}
+
+.btn-gold-outline:hover {
+  background: rgba(223, 180, 92, 0.18);
+  color: #fff;
+  box-shadow: var(--gold-glow);
+}
+
+/* دکمه‌های عملیات سریع صفحه خانه */
+.quick-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.quick-action-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(25, 24, 28, 0.95);
+  border: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  font-size: 1.35rem;
+  transition: all 0.2s ease;
+}
+
+.quick-action:hover .quick-action-box {
+  border-color: var(--gold-border-strong);
+  box-shadow: var(--gold-glow);
+  transform: translateY(-2px);
+}
+
+.quick-action span {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+/* آواتار طلایی VIP */
+.vip-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-mid);
+  box-shadow: 0 0 14px rgba(223, 180, 92, 0.45);
+  object-fit: cover;
+  background: #23201b;
+}
+
+.vip-avatar-lg {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  border: 3px solid var(--gold-light);
+  box-shadow: 0 0 28px rgba(223, 180, 92, 0.5);
+  object-fit: cover;
+  background: #23201b;
+}
+
+.vip-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  border: 1px solid var(--gold-border-strong);
+  background: rgba(223, 180, 92, 0.14);
+}
+
+/* تب‌ها و فیلترهای قرصی */
+.pill-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+.pill-tabs::-webkit-scrollbar { display: none; }
+
+.pill-btn {
+  white-space: nowrap;
+  padding: 7px 14px;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--gold-border);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill-btn.active {
+  background: var(--gold-gradient);
+  color: #16130d;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(223, 180, 92, 0.32);
+}
+
+/* سوییچ خرید / فروش */
+.trade-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 5px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--gold-border);
+}
+
+.trade-toggle button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background: transparent;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.trade-toggle button.active {
+  background: var(--gold-gradient);
+  color: #16130d;
+  box-shadow: 0 4px 16px rgba(223, 180, 92, 0.35);
+}
+
+/* فیلدهای فرم لوکس */
+.luxury-input {
+  background: rgba(15, 15, 18, 0.85) !important;
+  border: 1px solid var(--gold-border) !important;
+  color: var(--text-main) !important;
+  border-radius: 13px !important;
+  padding: 11px 14px !important;
+  font-size: 0.9rem !important;
+}
+
+.luxury-input:focus {
+  border-color: var(--gold-border-strong) !important;
+  box-shadow: 0 0 0 3px rgba(223, 180, 92, 0.18) !important;
+}
+
+.luxury-label {
+  font-size: 0.78rem;
+  color: var(--gold-light);
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* کارت بانکی لوکس */
+.bank-card-luxury {
+  background: linear-gradient(135deg, #1d1b18 0%, #101012 55%, #2a2215 100%);
+  border: 1px solid var(--gold-border-strong);
+  border-radius: 18px;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5);
+}
+
+.bank-chip {
+  width: 38px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--gold-gradient);
+  opacity: 0.9;
+}
+
+/* کارت محصول ویترین */
+.product-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+
+.product-card:hover {
+  border-color: var(--gold-border-strong);
+  transform: translateY(-2px);
+}
+
+.product-visual {
+  height: 118px;
+  background: radial-gradient(circle at 50% 45%, rgba(223, 180, 92, 0.22), #0e0e11 78%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  color: var(--gold-light);
+  border-bottom: 1px solid rgba(223, 180, 92, 0.14);
+}
+
+/* کد QR نمایشی */
+.qr-frame {
+  width: 174px;
+  height: 174px;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 20px;
+  background: #141316;
+  border: 2px solid var(--gold-light);
+  box-shadow: 0 0 28px rgba(223, 180, 92, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* بج‌های وضعیت */
+.badge-gold-soft {
+  background: rgba(223, 180, 92, 0.16);
+  color: var(--gold-light);
+  border: 1px solid var(--gold-border);
+  font-size: 0.72rem;
+  padding: 4px 9px;
+  border-radius: 99px;
+}
+
+.badge-profit {
+  background: var(--success-soft);
+  color: #5ee69c;
+  border: 1px solid rgba(94, 230, 156, 0.35);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 99px;
+}
+
+.text-gold {
+  color: var(--gold-light) !important;
+}
+
+.text-muted-gold {
+  color: var(--text-muted) !important;
+}
+
+/* نوار ناوبری پایین */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 440px;
+  background: rgba(15, 15, 18, 0.96);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--gold-border);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 8px 6px 10px;
+  z-index: 1000;
+}
+
+@media (min-width: 576px) {
+  .bottom-nav {
+    bottom: 18px;
+    border-radius: 0 0 34px 34px;
+    border-left: 1px solid rgba(223, 180, 92, 0.25);
+    border-right: 1px solid rgba(223, 180, 92, 0.25);
+    border-bottom: 1px solid rgba(223, 180, 92, 0.25);
+  }
+}
+
+.nav-item-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.72rem;
+  cursor: pointer;
+  padding: 4px 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-item-btn i {
+  font-size: 1.25rem;
+}
+
+.nav-item-btn.active {
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+.nav-item-btn.active::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 34px;
+  height: 3px;
+  border-radius: 0 0 6px 6px;
+  background: var(--gold-gradient);
+  box-shadow: 0 2px 10px rgba(223, 180, 92, 0.7);
+}
+
+/* اسلایدر اقساط */
+.form-range::-webkit-slider-thumb {
+  background: var(--gold-mid);
+  box-shadow: 0 0 10px rgba(223, 180, 92, 0.7);
+}
+
+/* چت پشتیبانی */
+.chat-bubble-bot {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--gold-border);
+  border-radius: 16px 16px 4px 16px;
+  padding: 10px 13px;
+  font-size: 0.84rem;
+  max-width: 85%;
+}
+
+.chat-bubble-user {
+  background: var(--gold-gradient);
+  color: #17130c;
+  font-weight: 600;
+  border-radius: 16px 16px 16px 4px;
+  padding: 10px 13px;
+  font-size: 0.84rem;
+  max-width: 85%;
+  margin-right: auto;
+}
+
+/* ===== تنظیمات مخصوص اپ اندروید (افکت‌ها دست‌نخورده‌اند) ===== */
+html { -webkit-text-size-adjust: 100%; }
+body { -webkit-tap-highlight-color: transparent; overscroll-behavior-y: none; }
+button, .luxury-card, .quick-action, .icon-btn, .nav-item-btn, .pill-btn { -webkit-user-select: none; user-select: none; }
+input, textarea { -webkit-user-select: text; user-select: text; }

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>پنل مشتریان گالری طلا و جواهر</title>
+  <!-- Bootstrap 5 RTL -->
+  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="libs/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Vazirmatn Font -->
+  <link href="libs/vazirmatn/fonts.css" rel="stylesheet" />
+  <!-- Custom Dark Luxury CSS -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="app-shell">
+  <div class="ambient-glow"></div>
+
+  <div class="app-content">
+
+    <!-- ==================== ۱. صفحه خانه (HOME) ==================== -->
+    <section id="page-home" class="app-page active">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <div class="d-flex align-items-center gap-2" style="cursor:pointer" onclick="navigateTo('page-profile')">
+          <img id="homeAvatar" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%23f8e1a1%22/%3E%3Cstop%20offset=%220.55%22%20stop-color=%22%23d8aa4f%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23b5842b%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22100%22%20height=%22100%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%2250%22%20y=%2264%22%20font-size=%2240%22%20font-weight=%22700%22%20text-anchor=%22middle%22%20fill=%22%23111114%22%20font-family=%22sans-serif%22%3ESA%3C/text%3E%3C/svg%3E" alt="پروفایل" class="vip-avatar" />
+          <div>
+            <div class="fw-bold small" id="homeUserName">سلام، سارا احمدی</div>
+            <span class="vip-badge">VIP مشتری ویژه</span>
+          </div>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="icon-btn" onclick="navigateTo('page-rates')" title="نرخ لحظه‌ای"><i class="bi bi-graph-up-arrow"></i></button>
+          <button class="icon-btn" onclick="navigateTo('page-support')" title="پشتیبانی"><i class="bi bi-headset"></i></button>
+        </div>
+      </div>
+
+      <!-- کارت مجموع دارایی -->
+      <div class="gold-hero-card mb-3 text-center">
+        <div class="small fw-semibold opacity-75">مجموع دارایی‌های شما</div>
+        <div class="fs-2 fw-bold my-1">۳,۵۴۰,۰۰۰,۰۰۰</div>
+        <div class="small fw-bold">تومان</div>
+        <div class="mt-2 pt-2 border-top border-dark border-opacity-25 d-flex justify-content-center gap-3 small fw-semibold">
+          <span><i class="bi bi-arrow-up-right-circle-fill"></i> سود کل خریدها: +۶۹,۶۰۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+
+      <!-- عملیات سریع -->
+      <div class="row g-2 text-center mb-3">
+        <div class="col-3">
+          <div class="quick-action" onclick="navigateTo('page-trade')">
+            <div class="quick-action-box"><i class="bi bi-arrow-left-right"></i></div>
+            <span>خرید و فروش</span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="quick-action" onclick="navigateTo('page-growth')">
+            <div class="quick-action-box"><i class="bi bi-graph-up"></i></div>
+            <span>روند رشد</span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="quick-action" onclick="navigateTo('page-loans')">
+            <div class="quick-action-box"><i class="bi bi-bank"></i></div>
+            <span>تسهیلات و وام</span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="quick-action" onclick="navigateTo('page-wallet')">
+            <div class="quick-action-box"><i class="bi bi-credit-card"></i></div>
+            <span>کیف پول</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ویجت خزانه طلا -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h6 class="fw-bold m-0 text-gold">خزانه طلا و امانات</h6>
+        <button class="btn btn-sm text-gold p-0" onclick="navigateTo('page-vault')">جزئیات <i class="bi bi-chevron-left"></i></button>
+      </div>
+      <div class="luxury-card clickable mb-3" onclick="navigateTo('page-vault')">
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <div class="small text-muted-gold">موجودی کل طلای امانی و آب‌شده</div>
+            <div class="fs-4 fw-bold text-gold my-1">۳۴۰.۵ گرم</div>
+            <div class="small text-muted-gold">معادل ۱,۴۵۰,۰۰۰,۰۰۰ تومان</div>
+          </div>
+          <div class="display-5 text-gold"><i class="bi bi-safe2-fill"></i></div>
+        </div>
+      </div>
+
+      <!-- دسترسی سریع ویترین و اقساط -->
+      <div class="row g-2 mb-3">
+        <div class="col-6">
+          <div class="luxury-card clickable h-100" onclick="navigateTo('page-gallery')">
+            <i class="bi bi-gem text-gold fs-4"></i>
+            <div class="fw-bold small mt-1">ویترین گالری طلا</div>
+            <div class="text-muted-gold" style="font-size:0.72rem">طلای نو و دست دوم</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="luxury-card clickable h-100" onclick="navigateTo('page-installment')">
+            <i class="bi bi-calendar2-check text-gold fs-4"></i>
+            <div class="fw-bold small mt-1">فروش اقساطی</div>
+            <div class="text-muted-gold" style="font-size:0.72rem">۳ تا ۱۲ ماهه بدون ضامن</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- صورتحساب‌های اخیر -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h6 class="fw-bold m-0">صورتحساب‌های اخیر</h6>
+        <button class="btn btn-gold py-1 px-3" style="font-size:0.74rem" onclick="navigateTo('page-history')">مشاهده همه</button>
+      </div>
+      <div class="d-flex flex-column gap-2">
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center py-2" onclick="navigateTo('page-delivery')">
+          <div>
+            <div class="fw-bold small">خرید شمش و آب‌شده ۱۸ عیار</div>
+            <div class="text-muted-gold" style="font-size:0.72rem">۲۵ آبان • رسید QR آماده</div>
+          </div>
+          <div class="text-gold fw-bold small">- ۴۵,۰۰۰,۰۰۰ تومان</div>
+        </div>
+        <div class="luxury-card d-flex justify-content-between align-items-center py-2">
+          <div>
+            <div class="fw-bold small">واریز شتابی به کیف پول</div>
+            <div class="text-muted-gold" style="font-size:0.72rem">۲۴ آبان • موفق</div>
+          </div>
+          <div class="text-success fw-bold small">+ ۵۰,۰۰۰,۰۰۰ تومان</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ۲. صفحه بازار و نرخ لحظه‌ای ==================== -->
+    <section id="page-rates" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-home')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">بازار و نرخ لحظه‌ای فلزات و ارز</h1>
+        <button class="icon-btn" onclick="refreshRates()"><i class="bi bi-arrow-clockwise"></i></button>
+      </div>
+
+      <div class="pill-tabs mb-3">
+        <button class="pill-btn active" onclick="filterRates('all', this)">همه نرخ‌ها</button>
+        <button class="pill-btn" onclick="filterRates('metals', this)">فلزات گران‌بها</button>
+        <button class="pill-btn" onclick="filterRates('coins', this)">سکه</button>
+        <button class="pill-btn" onclick="filterRates('currency', this)">ارزهای معتبر</button>
+      </div>
+
+      <!-- نمودار زنده مثقال طلا -->
+      <div class="luxury-card mb-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <div>
+            <div class="small text-muted-gold">مثقال طلای ۱۷ عیار (مظنه)</div>
+            <div class="fs-5 fw-bold text-gold">۱۸,۴۵۰,۰۰۰ تومان</div>
+          </div>
+          <span class="badge-profit">+۱.۵۴٪ (۲۴h)</span>
+        </div>
+        <div style="height:150px">
+          <canvas id="marketChart"></canvas>
+        </div>
+      </div>
+
+      <div id="ratesList" class="d-flex flex-column gap-2"></div>
+    </section>
+
+    <!-- ==================== ۳. صفحه خرید و فروش آنلاین طلا ==================== -->
+    <section id="page-trade" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-home')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">خرید و فروش آنلاین طلا</h1>
+        <button class="icon-btn" onclick="navigateTo('page-rates')"><i class="bi bi-info-lg"></i></button>
+      </div>
+
+      <div class="trade-toggle mb-3">
+        <button id="btnModeBuy" class="active" onclick="setTradeMode('buy')">خرید طلا</button>
+        <button id="btnModeSell" onclick="setTradeMode('sell')">فروش طلا</button>
+      </div>
+
+      <div class="pill-tabs mb-3">
+        <button class="pill-btn active" onclick="setGoldCategory('طلای آب‌شده', 4260000, this)">طلای آب‌شده</button>
+        <button class="pill-btn" onclick="setGoldCategory('طلای نو', 4680000, this)">طلای نو</button>
+        <button class="pill-btn" onclick="setGoldCategory('طلای دست دوم', 4390000, this)">طلای دست دوم</button>
+      </div>
+
+      <div class="luxury-card d-flex justify-content-between align-items-center mb-3 py-2">
+        <span class="small text-muted-gold">نرخ لحظه‌ای <span id="tradeCatLabel">طلای آب‌شده</span> (هر گرم)</span>
+        <span class="fw-bold text-gold" id="tradeUnitRate">۴,۲۶۰,۰۰۰ تومان</span>
+      </div>
+
+      <div class="luxury-card mb-3">
+        <div class="mb-3">
+          <label class="luxury-label">مبلغ (تومان)</label>
+          <input type="number" id="tradeAmountInput" class="form-control luxury-input" value="42600000" oninput="calcFromAmount()" />
+        </div>
+        <div class="mb-3">
+          <label class="luxury-label">وزن طلا (گرم)</label>
+          <input type="number" step="0.001" id="tradeWeightInput" class="form-control luxury-input" value="10" oninput="calcFromWeight()" />
+        </div>
+        <div class="d-flex gap-2 justify-content-between mb-3">
+          <button class="pill-btn flex-fill text-center" onclick="quickWeight(1)">۱ گرم</button>
+          <button class="pill-btn flex-fill text-center" onclick="quickWeight(5)">۵ گرم</button>
+          <button class="pill-btn flex-fill text-center active" onclick="quickWeight(10)">۱۰ گرم</button>
+          <button class="pill-btn flex-fill text-center" onclick="quickWeight(4.608)">۱ مثقال</button>
+        </div>
+        <div class="d-flex justify-content-between small text-muted-gold pt-2 border-top border-secondary border-opacity-25">
+          <span>کارمزد معامله (۰.۵٪):</span>
+          <span class="text-gold" id="tradeFeeDisplay">۲۱۳,۰۰۰ تومان</span>
+        </div>
+      </div>
+
+      <button id="tradeSubmitBtn" class="btn btn-gold w-100 py-3" onclick="submitTradeOrder()">ثبت سفارش خرید</button>
+    </section>
+
+    <!-- ==================== ۴. صفحه خزانه طلا و قراردادهای امانی ==================== -->
+    <section id="page-vault" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-home')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">خزانه طلا و قراردادهای امانی</h1>
+        <button class="icon-btn" onclick="navigateTo('page-growth')" title="روند رشد"><i class="bi bi-graph-up"></i></button>
+      </div>
+
+      <div class="gold-hero-card mb-3 text-center">
+        <div class="small fw-semibold opacity-75">مجموع موجودی طلای شما</div>
+        <div class="fs-2 fw-bold my-1">۳۴۰.۵ گرم</div>
+        <div class="small fw-bold">معادل ۱,۴۵۰,۰۰۰,۰۰۰ تومان</div>
+      </div>
+
+      <div class="row g-2 mb-3">
+        <div class="col-6">
+          <button class="btn btn-gold-outline w-100 small" onclick="navigateTo('page-delivery')"><i class="bi bi-box-seam ms-1"></i>تحویل فیزیکی</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-gold w-100 small" onclick="navigateTo('page-growth')"><i class="bi bi-graph-up-arrow ms-1"></i>نمودار سود</button>
+        </div>
+      </div>
+
+      <h6 class="fw-bold text-gold mb-2">جزئیات خزانه و امانات</h6>
+      <div class="d-flex flex-column gap-2">
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center" onclick="openPurchaseGrowth(0)">
+          <div>
+            <div class="fw-bold small">طلای آب‌شده آنلاین (امانی)</div>
+            <div class="text-muted-gold" style="font-size:0.75rem">۲۲۰.۵ گرم • موجود در خزانه</div>
+          </div>
+          <span class="badge-gold-soft">مشاهده سود</span>
+        </div>
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center" onclick="openPurchaseGrowth(1)">
+          <div>
+            <div class="fw-bold small">قرارداد امانی #۴۰۸۲</div>
+            <div class="text-muted-gold" style="font-size:0.75rem">۸۰.۰ گرم (۱۸ عیار) • فعال</div>
+          </div>
+          <span class="badge-profit">+۱۵.۱٪</span>
+        </div>
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center" onclick="navigateTo('page-delivery')">
+          <div>
+            <div class="fw-bold small">قرارداد امانی #۳۹۱۵ (شمش ۲۴ عیار)</div>
+            <div class="text-muted-gold" style="font-size:0.75rem">۴۰.۰ گرم • آماده تحویل حضوری</div>
+          </div>
+          <span class="badge-gold-soft">رسید QR</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ۵. صفحه روند رشد و سود همه خریدها (امانی و تحویل‌شده) ==================== -->
+    <section id="page-growth" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-home')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">روند رشد و سود خریدها</h1>
+        <button class="icon-btn" onclick="navigateTo('page-vault')"><i class="bi bi-safe2"></i></button>
+      </div>
+
+      <!-- فیلتر همه خریدها / امانی / تحویل‌شده -->
+      <div class="pill-tabs mb-3">
+        <button class="pill-btn active" onclick="filterPurchases('all', this)">همه خریدها</button>
+        <button class="pill-btn" onclick="filterPurchases('custody', this)">کالاهای امانی</button>
+        <button class="pill-btn" onclick="filterPurchases('delivered', this)">تحویل‌شده (فیزیکی)</button>
+      </div>
+
+      <!-- لیست انتخاب خرید -->
+      <div id="purchaseSelectorList" class="d-flex flex-column gap-2 mb-3"></div>
+
+      <!-- کارت جزئیات خرید انتخاب‌شده -->
+      <div class="luxury-card mb-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <div>
+            <div class="fw-bold text-gold" id="growthItemTitle">طلای آب‌شده امانی (۵۰ گرم)</div>
+            <div class="text-muted-gold" style="font-size:0.75rem" id="growthItemMeta">تاریخ خرید: ۱۵ شهریور • نگهداری امانی در خزانه گالری</div>
+          </div>
+          <span class="badge-gold-soft" id="growthItemStatus">امانی در خزانه</span>
+        </div>
+        <div class="row g-2 text-center mt-2 pt-2 border-top border-secondary border-opacity-25">
+          <div class="col-6">
+            <div class="text-muted-gold" style="font-size:0.72rem">ارزش زمان خرید</div>
+            <div class="fw-bold small" id="growthBuyPrice">۱۸۵,۰۰۰,۰۰۰ تومان</div>
+          </div>
+          <div class="col-6 border-end border-secondary border-opacity-25">
+            <div class="text-muted-gold" style="font-size:0.72rem">ارزش فعلی به نرخ روز</div>
+            <div class="fw-bold small text-gold" id="growthCurrentPrice">۲۱۳,۰۰۰,۰۰۰ تومان</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- بنر سود تومانی -->
+      <div class="gold-hero-card mb-3 d-flex justify-content-between align-items-center">
+        <div>
+          <div class="small fw-semibold opacity-75">میزان سود و رشد تا این لحظه</div>
+          <div class="fs-4 fw-bold" id="growthProfitToman">+۲۸,۰۰۰,۰۰۰ تومان</div>
+        </div>
+        <span class="badge bg-dark text-gold px-3 py-2 rounded-pill fw-bold" id="growthProfitPercent">+۱۵.۱٪ رشد</span>
+      </div>
+
+      <!-- نمودار روند صعود -->
+      <div class="luxury-card mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="small fw-bold text-gold">نمودار رشد از زمان خرید تاکنون (تومان)</span>
+        </div>
+        <div style="height:190px">
+          <canvas id="growthChart"></canvas>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <div class="col-6">
+          <button class="btn btn-gold w-100 small" onclick="navigateTo('page-trade')">فروش به نرخ روز</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-gold-outline w-100 small" onclick="navigateTo('page-delivery')">رسید / تحویل</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ۶. صفحه ویترین گالری طلا ==================== -->
+    <section id="page-gallery" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-home')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">ویترین گالری طلا</h1>
+        <button class="icon-btn" onclick="navigateTo('page-installment')" title="اقساطی"><i class="bi bi-calendar2-check"></i></button>
+      </div>
+
+      <div class="pill-tabs mb-3">
+        <button class="pill-btn active" onclick="renderGallery('all', this)">همه</button>
+        <button class="pill-btn" onclick="renderGallery('new', this)">طلای نو</button>
+        <button class="pill-btn" onclick="renderGallery('used', this)">طلای دست دوم</button>
+        <button class="pill-btn" onclick="renderGallery('coin', this)">سکه و شمش</button>
+      </div>
+
+      <div id="galleryGrid" class="row g-2"></div>
+    </section>
+
+    <!-- ==================== ۷. صفحه جزئیات محصول ==================== -->
+    <section id="page-product-detail" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-gallery')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">جزئیات محصول</h1>
+        <button class="icon-btn" onclick="showToast('به علاقه‌مندی‌ها اضافه شد')"><i class="bi bi-heart"></i></button>
+      </div>
+
+      <div class="luxury-card text-center py-4 mb-3">
+        <div class="display-2 text-gold mb-2" id="detailIcon"><i class="bi bi-gem"></i></div>
+        <h5 class="fw-bold mb-1" id="detailName">دستبند طلای نو کارتیه</h5>
+        <span class="vip-badge" id="detailCode">۱۸ عیار | کد N-1042</span>
+      </div>
+
+      <div class="luxury-card mb-3">
+        <div class="d-flex justify-content-between py-2 border-bottom border-secondary border-opacity-25 small">
+          <span class="text-muted-gold">وزن خالص:</span>
+          <span class="fw-bold" id="detailWeight">۱۲.۴ گرم</span>
+        </div>
+        <div class="d-flex justify-content-between py-2 border-bottom border-secondary border-opacity-25 small">
+          <span class="text-muted-gold">اجرت ساخت:</span>
+          <span class="fw-bold" id="detailWage">۷٪</span>
+        </div>
+        <div class="d-flex justify-content-between py-2 border-bottom border-secondary border-opacity-25 small">
+          <span class="text-muted-gold">سود و مالیات:</span>
+          <span class="fw-bold text-success">شفاف و طبق نرخ اتحادیه</span>
+        </div>
+        <div class="d-flex justify-content-between pt-3 align-items-center">
+          <span class="fw-bold text-gold">قیمت نهایی:</span>
+          <span class="fs-5 fw-bold text-gold" id="detailPrice">۵۹,۸۰۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <div class="col-6">
+          <button class="btn btn-gold w-100" onclick="showToast('سفارش خرید نقدی با موفقیت ثبت شد'); navigateTo('page-delivery')">ثبت سفارش خرید</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-gold-outline w-100" onclick="navigateTo('page-installment')">خرید اقساطی</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ۸. صفحه رسید تحویل فیزیکی و فاکتور QR ==================== -->
+    <section id="page-delivery" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-vault')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">رسید تحویل فیزیکی و فاکتور</h1>
+        <button class="icon-btn" onclick="showToast('لینک فاکتور کپی شد')"><i class="bi bi-share"></i></button>
+      </div>
+
+      <div class="luxury-card text-center mb-3">
+        <div class="qr-frame mb-3">
+          <i class="bi bi-qr-code text-gold" style="font-size: 7.5rem; line-height: 1;"></i>
+        </div>
+        <div class="fw-bold text-gold">کد تحویل حضوری در گالری</div>
+        <div class="small text-muted-gold">کد پیگیری: GLD-84920</div>
+      </div>
+
+      <div class="luxury-card mb-3 small">
+        <div class="d-flex justify-content-between py-2 border-bottom border-secondary border-opacity-25">
+          <span class="text-muted-gold">نوع کالا:</span>
+          <span class="fw-bold">طلای آب‌شده ۱۸ عیار (کد انگ‌دار)</span>
+        </div>
+        <div class="d-flex justify-content-between py-2 border-bottom border-secondary border-opacity-25">
+          <span class="text-muted-gold">وزن قابل تحویل:</span>
+          <span class="fw-bold text-gold">۵۰.۰۰۰ گرم</span>
+        </div>
+        <div class="d-flex justify-content-between py-2 border-bottom border-secondary border-opacity-25">
+          <span class="text-muted-gold">وضعیت سفارش:</span>
+          <span class="badge-profit">تایید شده و آماده تحویل</span>
+        </div>
+        <div class="d-flex justify-content-between pt-2">
+          <span class="text-muted-gold">زمان مراجعه:</span>
+          <span class="fw-bold">چهارشنبه ۵ آذر - ساعت ۱۱:۰۰</span>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <div class="col-6">
+          <button class="btn btn-gold w-100 small" onclick="showToast('دانلود فاکتور PDF آغاز شد')"><i class="bi bi-file-earmark-pdf ms-1"></i>دانلود PDF</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-gold-outline w-100 small" onclick="showToast('مسیریابی تا گالری باز شد')"><i class="bi bi-geo-alt ms-1"></i>مسیریابی</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ۹. صفحه تاریخچه تراکنش‌ها ==================== -->
+    <section id="page-history" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-home')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">تاریخچه تراکنش‌ها</h1>
+        <button class="icon-btn" onclick="showToast('خروجی اکسل آماده شد')"><i class="bi bi-funnel"></i></button>
+      </div>
+
+      <div class="luxury-card mb-3 text-center">
+        <div class="small text-muted-gold">کل گردش تراکنش‌های این ماه</div>
+        <div class="fs-4 fw-bold text-gold mt-1">۸۵,۴۲۰,۰۰۰ تومان</div>
+      </div>
+
+      <div class="d-flex flex-column gap-2">
+        <div class="luxury-card d-flex justify-content-between align-items-center">
+          <div>
+            <div class="fw-bold small">خرید شمش طلا</div>
+            <div class="text-muted-gold" style="font-size:0.72rem">پرداخت آنلاین • ۲۷ آبان ۱۴:۳۰</div>
+          </div>
+          <div class="text-end">
+            <div class="text-gold fw-bold small">- ۴۵,۰۰۰,۰۰۰</div>
+            <span class="badge-profit">موفق</span>
+          </div>
+        </div>
+        <div class="luxury-card d-flex justify-content-between align-items-center">
+          <div>
+            <div class="fw-bold small">واریز پایا به کیف پول</div>
+            <div class="text-muted-gold" style="font-size:0.72rem">بانک ملی • ۲۶ آبان ۱۰:۱۵</div>
+          </div>
+          <div class="text-end">
+            <div class="text-success fw-bold small">+ ۱۲,۸۰۰,۰۰۰</div>
+            <span class="badge-profit">موفق</span>
+          </div>
+        </div>
+        <div class="luxury-card d-flex justify-content-between align-items-center">
+          <div>
+            <div class="fw-bold small">خرید طلای آب‌شده (خزانه)</div>
+            <div class="text-muted-gold" style="font-size:0.72rem">برداشت از کیف پول • ۲۳ آبان ۱۲:۰۵</div>
+          </div>
+          <div class="text-end">
+            <div class="text-gold fw-bold small">- ۲۷,۴۷۰,۰۰۰</div>
+            <span class="badge-profit">موفق</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ۱۰. صفحه کیف پول و کارت‌های بانکی ==================== -->
+    <section id="page-wallet" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-home')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">کیف پول و کارت‌های بانکی</h1>
+        <button class="icon-btn" onclick="navigateTo('page-history')"><i class="bi bi-clock-history"></i></button>
+      </div>
+
+      <div class="gold-hero-card mb-3 text-center">
+        <div class="small fw-semibold opacity-75">موجودی کیف پول ریالی</div>
+        <div class="fs-2 fw-bold my-1" id="walletBalanceDisplay">۱۸۵,۴۰۰,۰۰۰</div>
+        <div class="small fw-bold">تومان</div>
+      </div>
+
+      <div class="row g-2 mb-3">
+        <div class="col-6">
+          <button class="btn btn-gold w-100" onclick="walletAction('deposit')"><i class="bi bi-plus-circle ms-1"></i>واریز آنی</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-gold-outline w-100" onclick="walletAction('withdraw')"><i class="bi bi-arrow-up-circle ms-1"></i>برداشت</button>
+        </div>
+      </div>
+
+      <h6 class="fw-bold text-gold mb-2">کارت‌های بانکی من</h6>
+      <div class="bank-card-luxury mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold text-gold small">بانک ملی ایران</span>
+          <div class="bank-chip"></div>
+        </div>
+        <div class="fs-5 fw-bold tracking-wide text-center my-2" dir="ltr" id="walletCardNumber">6037 - 9974 - **** - 4812</div>
+        <div class="d-flex justify-content-between small text-muted-gold mt-3">
+          <span id="walletCardHolder">سارا احمدی</span>
+          <span>تایید شده <i class="bi bi-patch-check-fill text-gold"></i></span>
+        </div>
+      </div>
+
+      <button class="btn btn-gold-outline w-100 border-dashed mb-3" onclick="navigateTo('page-kyc')">+ مدیریت یا افزودن کارت بانکی</button>
+    </section>
+
+    <!-- ==================== ۱۱. صفحه فروش اقساطی طلا ==================== -->
+    <section id="page-installment" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-home')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">فروش اقساطی طلا</h1>
+        <button class="icon-btn" onclick="navigateTo('page-loans')"><i class="bi bi-bank"></i></button>
+      </div>
+
+      <div class="gold-hero-card mb-3">
+        <div class="fw-bold fs-6">خرید اقساطی طلا با تحویل امانی</div>
+        <div class="small opacity-75 mt-1">اقساط منعطف ۳ تا ۱۲ ماهه بدون نیاز به ضامن رسمی</div>
+      </div>
+
+      <div class="luxury-card mb-3">
+        <div class="d-flex justify-content-between small mb-1">
+          <span class="text-muted-gold">مبلغ کل خرید:</span>
+          <span class="fw-bold text-gold" id="instTotalLabel">۱۰۰,۰۰۰,۰۰۰ تومان</span>
+        </div>
+        <input type="range" class="form-range mb-3" min="20000000" max="300000000" step="10000000" value="100000000" id="instRange" oninput="calcInstallment()" />
+
+        <div class="d-flex justify-content-between small mb-3">
+          <span class="text-muted-gold">پیش‌پرداخت (۳۰٪):</span>
+          <span class="fw-bold" id="instDownLabel">۳۰,۰۰۰,۰۰۰ تومان</span>
+        </div>
+
+        <label class="luxury-label mb-2">مدت بازپرداخت:</label>
+        <div class="d-flex gap-2 mb-3">
+          <button class="pill-btn flex-fill text-center" onclick="setInstMonths(3, this)">۳ ماهه</button>
+          <button class="pill-btn flex-fill text-center active" onclick="setInstMonths(6, this)">۶ ماهه</button>
+          <button class="pill-btn flex-fill text-center" onclick="setInstMonths(9, this)">۹ ماهه</button>
+          <button class="pill-btn flex-fill text-center" onclick="setInstMonths(12, this)">۱۲ ماهه</button>
+        </div>
+
+        <div class="p-3 rounded-4 text-center" style="background:rgba(223,180,92,0.12); border:1px solid var(--gold-border-strong)">
+          <div class="small text-muted-gold">مبلغ هر قسط ماهانه</div>
+          <div class="fs-4 fw-bold text-gold mt-1" id="instMonthlyLabel">۱۲,۸۳۳,۳۳۳ تومان</div>
+        </div>
+      </div>
+
+      <div class="luxury-card mb-3 small d-flex align-items-center gap-2">
+        <i class="bi bi-shield-check text-gold fs-4"></i>
+        <span>تضمین: نگهداری طلا در خزانه امن گالری تا تسویه کامل اقساط</span>
+      </div>
+
+      <button class="btn btn-gold w-100 py-3" onclick="showToast('درخواست خرید اقساطی شما ثبت شد')">ثبت درخواست خرید اقساطی</button>
+    </section>
+
+    <!-- ==================== ۱۲. صفحه اصلی تسهیلات و انواع وام‌ها ==================== -->
+    <section id="page-loans" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-home')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">تسهیلات و انواع وام‌ها</h1>
+        <button class="icon-btn" onclick="navigateTo('page-support')"><i class="bi bi-headset"></i></button>
+      </div>
+
+      <div class="gold-hero-card mb-3">
+        <div class="fw-bold fs-6">تسهیلات اختصاصی مشتریان گالری</div>
+        <div class="small opacity-75 mt-1">انتخاب و دریافت سریع وام با پشتوانه طلا و اعتبارسنجی</div>
+      </div>
+
+      <h6 class="fw-bold text-gold mb-2">انواع وام‌های قابل پرداخت</h6>
+      <div class="d-flex flex-column gap-2">
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center" onclick="openLoanDetail('goods')">
+          <div class="d-flex align-items-center gap-3">
+            <div class="quick-action-box" style="width:46px;height:46px;font-size:1.2rem"><i class="bi bi-bag-check"></i></div>
+            <div>
+              <div class="fw-bold small">وام خرید کالا</div>
+              <div class="text-muted-gold" style="font-size:0.73rem">تا ۲۰۰ میلیون تومان • بازپرداخت ۱۸ ماهه</div>
+            </div>
+          </div>
+          <i class="bi bi-chevron-left text-gold"></i>
+        </div>
+
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center" onclick="openLoanDetail('invest')">
+          <div class="d-flex align-items-center gap-3">
+            <div class="quick-action-box" style="width:46px;height:46px;font-size:1.2rem"><i class="bi bi-graph-up-arrow"></i></div>
+            <div>
+              <div class="fw-bold small">وام سرمایه‌گذاری</div>
+              <div class="text-muted-gold" style="font-size:0.73rem">با پشتوانه طلای خزانه • سقف ۵۰۰ میلیون</div>
+            </div>
+          </div>
+          <i class="bi bi-chevron-left text-gold"></i>
+        </div>
+
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center" onclick="openLoanDetail('resalat')">
+          <div class="d-flex align-items-center gap-3">
+            <div class="quick-action-box" style="width:46px;height:46px;font-size:1.2rem"><i class="bi bi-bank2"></i></div>
+            <div>
+              <div class="fw-bold small">وام بانک رسالت</div>
+              <div class="text-muted-gold" style="font-size:0.73rem">قرض‌الحسنه ۲٪ • بدون سود بانکی</div>
+            </div>
+          </div>
+          <i class="bi bi-chevron-left text-gold"></i>
+        </div>
+
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center" onclick="openLoanDetail('bazaar')">
+          <div class="d-flex align-items-center gap-3">
+            <div class="quick-action-box" style="width:46px;height:46px;font-size:1.2rem"><i class="bi bi-lightning-charge"></i></div>
+            <div>
+              <div class="fw-bold small">وام بازاری</div>
+              <div class="text-muted-gold" style="font-size:0.73rem">پرداخت فوری ۲۴ ساعته • شرایط توافقی</div>
+            </div>
+          </div>
+          <i class="bi bi-chevron-left text-gold"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ۱۳. صفحه اختصاصی هر وام ==================== -->
+    <section id="page-loan-detail" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-loans')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title" id="loanDetailTitle">جزئیات وام</h1>
+        <button class="icon-btn" onclick="navigateTo('page-support')"><i class="bi bi-question-lg"></i></button>
+      </div>
+
+      <div class="gold-hero-card mb-3 text-center">
+        <div class="fs-1 mb-1" id="loanDetailIcon"><i class="bi bi-bank2"></i></div>
+        <div class="small fw-semibold opacity-75">سقف تسهیلات قابل پرداخت</div>
+        <div class="fs-3 fw-bold my-1" id="loanDetailMax">۳۰۰,۰۰۰,۰۰۰ تومان</div>
+        <div class="d-flex justify-content-center gap-2 mt-2">
+          <span class="badge bg-dark text-gold px-3 py-2 rounded-pill" id="loanDetailPill1">کارمزد: ۲٪</span>
+          <span class="badge bg-dark text-gold px-3 py-2 rounded-pill" id="loanDetailPill2">بازپرداخت: ۱۲ تا ۲۴ ماه</span>
+        </div>
+      </div>
+
+      <div class="luxury-card mb-3">
+        <h6 class="fw-bold text-gold mb-3" id="loanDetailSectionHeading">توضیحات و شرایط تسهیلات</h6>
+        <ul id="loanDetailBullets" class="list-unstyled d-flex flex-column gap-2 small mb-0"></ul>
+      </div>
+
+      <button id="loanApplyBtn" class="btn btn-gold w-100 py-3" onclick="showToast('درخواست وام شما با موفقیت ثبت شد و کارشناسان تماس می‌گیرند')">ثبت درخواست وام</button>
+    </section>
+
+    <!-- ==================== ۱۴. صفحه پروفایل و تنظیمات ==================== -->
+    <section id="page-profile" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-home')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">پروفایل و تنظیمات کاربری</h1>
+        <button class="icon-btn" onclick="navigateTo('page-support')"><i class="bi bi-headset"></i></button>
+      </div>
+
+      <div class="text-center mb-3">
+        <img id="profileAvatar" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%23f8e1a1%22/%3E%3Cstop%20offset=%220.55%22%20stop-color=%22%23d8aa4f%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23b5842b%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22100%22%20height=%22100%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%2250%22%20y=%2264%22%20font-size=%2240%22%20font-weight=%22700%22%20text-anchor=%22middle%22%20fill=%22%23111114%22%20font-family=%22sans-serif%22%3ESA%3C/text%3E%3C/svg%3E" class="vip-avatar-lg mb-2" alt="پروفایل" />
+        <h5 class="fw-bold mb-1" id="profileFullName">سارا احمدی</h5>
+        <span class="vip-badge">مشتری ویژه VIP • کد ۸۴۰۹۱۲۳۴</span>
+      </div>
+
+      <div class="luxury-card row g-0 text-center mb-3 py-3">
+        <div class="col-6">
+          <div class="small text-muted-gold">موجودی دارایی</div>
+          <div class="fw-bold text-gold mt-1">۳,۵۴۰,۰۰۰,۰۰۰ ت</div>
+        </div>
+        <div class="col-6 border-end border-secondary border-opacity-25">
+          <div class="small text-muted-gold">امتیاز وفاداری</div>
+          <div class="fw-bold text-gold mt-1"><i class="bi bi-star-fill"></i> ۸,۴۵۰ امتیاز</div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column gap-2">
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center py-3" onclick="navigateTo('page-kyc')">
+          <span><i class="bi bi-person-vcard text-gold ms-2"></i>تکمیل مشخصات کاربری و بانکی</span>
+          <i class="bi bi-chevron-left text-gold"></i>
+        </div>
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center py-3" onclick="navigateTo('page-growth')">
+          <span><i class="bi bi-graph-up-arrow text-gold ms-2"></i>روند رشد و سود خریدهای من</span>
+          <i class="bi bi-chevron-left text-gold"></i>
+        </div>
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center py-3" onclick="navigateTo('page-wallet')">
+          <span><i class="bi bi-credit-card text-gold ms-2"></i>کارت‌ها و حساب‌های بانکی</span>
+          <i class="bi bi-chevron-left text-gold"></i>
+        </div>
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center py-3" onclick="navigateTo('page-loans')">
+          <span><i class="bi bi-bank text-gold ms-2"></i>درخواست تسهیلات و وام</span>
+          <i class="bi bi-chevron-left text-gold"></i>
+        </div>
+        <div class="luxury-card clickable d-flex justify-content-between align-items-center py-3" onclick="navigateTo('page-support')">
+          <span><i class="bi bi-headset text-gold ms-2"></i>پشتیبانی و چت آنلاین VIP</span>
+          <i class="bi bi-chevron-left text-gold"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ۱۵. صفحه تکمیل مشخصات کاربری (KYC) ==================== -->
+    <section id="page-kyc" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-profile')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">تکمیل مشخصات کاربری</h1>
+        <div style="width:40px"></div>
+      </div>
+
+      <div class="text-center mb-3">
+        <div class="position-relative d-inline-block">
+          <img id="kycAvatarPreview" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%23f8e1a1%22/%3E%3Cstop%20offset=%220.55%22%20stop-color=%22%23d8aa4f%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23b5842b%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22100%22%20height=%22100%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%2250%22%20y=%2264%22%20font-size=%2240%22%20font-weight=%22700%22%20text-anchor=%22middle%22%20fill=%22%23111114%22%20font-family=%22sans-serif%22%3ESA%3C/text%3E%3C/svg%3E" class="vip-avatar-lg" alt="تصویر کاربر" />
+          <label for="kycPhotoInput" class="btn btn-gold position-absolute bottom-0 start-0 rounded-circle p-0 d-flex align-items-center justify-content-center" style="width:32px;height:32px;cursor:pointer">
+            <i class="bi bi-camera-fill small"></i>
+          </label>
+          <input type="file" id="kycPhotoInput" accept="image/*" class="d-none" onchange="previewProfilePhoto(event)" />
+        </div>
+        <div class="small text-muted-gold mt-2">الصاق یا تغییر تصویر پروفایل</div>
+      </div>
+
+      <form id="kycForm" onsubmit="saveKycProfile(event)" class="luxury-card d-flex flex-column gap-3 mb-3">
+        <div>
+          <label class="luxury-label">نام و نام خانوادگی</label>
+          <input type="text" id="kycName" class="form-control luxury-input" value="سارا احمدی" required />
+        </div>
+        <div>
+          <label class="luxury-label">کد ملی</label>
+          <input type="text" id="kycNationalId" class="form-control luxury-input" value="2291845612" maxlength="10" required />
+        </div>
+        <div>
+          <label class="luxury-label">شماره کارت بانکی (۱۶ رقمی)</label>
+          <input type="text" id="kycCard" class="form-control luxury-input" dir="ltr" value="6037-9974-1234-4812" required />
+        </div>
+        <div>
+          <label class="luxury-label">شماره حساب / شبا (IR)</label>
+          <input type="text" id="kycSheba" class="form-control luxury-input" dir="ltr" value="IR450170000010458921456001" required />
+        </div>
+        <div>
+          <label class="luxury-label">کد پستی (۱۰ رقمی)</label>
+          <input type="text" id="kycPostal" class="form-control luxury-input" dir="ltr" value="71948-53211" required />
+        </div>
+        <div>
+          <label class="luxury-label">آدرس دقیق محل سکونت</label>
+          <textarea id="kycAddress" rows="2" class="form-control luxury-input" required>شیراز، بلوار ستارخان، کوچه ۱۲، پلاک ۴۵</textarea>
+        </div>
+        <button type="submit" class="btn btn-gold w-100 py-3">ذخیره و تایید اطلاعات</button>
+      </form>
+    </section>
+
+    <!-- ==================== ۱۶. صفحه پشتیبانی و چت آنلاین VIP ==================== -->
+    <section id="page-support" class="app-page">
+      <div class="page-header">
+        <button class="icon-btn" onclick="navigateTo('page-profile')"><i class="bi bi-chevron-right"></i></button>
+        <h1 class="page-title">پشتیبانی و چت آنلاین</h1>
+        <div style="width:40px"></div>
+      </div>
+
+      <div class="gold-hero-card mb-3 d-flex align-items-center justify-content-between">
+        <div>
+          <div class="fw-bold">پشتیبان ویژه (VIP)</div>
+          <div class="small opacity-75">پاسخگویی آنلاین ۲۴ ساعته</div>
+        </div>
+        <i class="bi bi-chat-dots-fill fs-1"></i>
+      </div>
+
+      <div class="luxury-card mb-3">
+        <div id="chatMessages" class="d-flex flex-column gap-2 mb-3" style="max-height:240px; overflow-y:auto;">
+          <div class="chat-bubble-bot">سلام! خوش آمدید. در مورد خرید طلا، قراردادهای امانی یا تسهیلات چطور می‌توانم کمکتان کنم؟</div>
+        </div>
+        <div class="input-group">
+          <input type="text" id="chatInput" class="form-control luxury-input" placeholder="پیام خود را بنویسید..." />
+          <button class="btn btn-gold px-3" onclick="sendChatMessage()"><i class="bi bi-send-fill"></i></button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- نوار ناوبری پایین -->
+  <nav class="bottom-nav">
+    <button class="nav-item-btn active" data-target="page-home" onclick="navigateTo('page-home')">
+      <i class="bi bi-house-door-fill"></i>
+      <span>خانه</span>
+    </button>
+    <button class="nav-item-btn" data-target="page-rates" onclick="navigateTo('page-rates')">
+      <i class="bi bi-graph-up-arrow"></i>
+      <span>بازار</span>
+    </button>
+    <button class="nav-item-btn" data-target="page-vault" onclick="navigateTo('page-vault')">
+      <i class="bi bi-wallet2"></i>
+      <span>دارایی‌ها</span>
+    </button>
+    <button class="nav-item-btn" data-target="page-profile" onclick="navigateTo('page-profile')">
+      <i class="bi bi-person-fill"></i>
+      <span>پروفایل</span>
+    </button>
+  </nav>
+</div>
+
+<!-- Toast اعلان‌های سیستم -->
+<div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 2000;">
+  <div id="appToast" class="toast align-items-center text-bg-dark border border-warning" role="alert">
+    <div class="d-flex">
+      <div class="toast-body text-gold fw-semibold small" id="toastMsg">عملیات با موفقیت انجام شد</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS & Chart.js -->
+<script src="libs/bootstrap.bundle.min.js"></script>
+<script src="libs/chart.umd.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
