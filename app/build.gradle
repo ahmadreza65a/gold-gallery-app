@@ -10,7 +10,7 @@ android {
         applicationId 'ir.yazdandoost.goldgallery'
         minSdk 26
         targetSdk 34
-        versionCode (project.findProperty('vcode') ?: '1').toInteger()
+        versionCode Integer.parseInt((project.findProperty("vcode") ?: "1").toString())
         versionName '1.0'
     }
 
