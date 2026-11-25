@@ -1,0 +1,105 @@
+/* تم نهایی: قسمت ۱ */
+:root{
+  --bg-body:#121212;--bg-phone:#121212;
+  --gold-light:#e2c691;
+  --text-main:#fbf0dc;--text-muted:#9a9186;
+  --gold-border:rgba(196,168,118,.55);
+  --gold-border-strong:#d6be96;
+  --gold-glow:0 0 24px rgba(214,165,70,.30);
+  --gold-gradient:linear-gradient(135deg,#f0d78e 0%,#e2c37a 50%,#d2ab5b 100%);
+  --card-bg:linear-gradient(135deg,#38332e 0%,#2d2a28 45%,#242223 100%);
+  --card-stroke:linear-gradient(180deg,#d6be96 0%,#a89370 30%,#9a8a6c 70%,#c9b38e 100%);
+  --btn-gold:linear-gradient(105deg,#c79e4c 0%,#d9b569 22%,#f2dd9d 48%,#dcc88f 60%,#d5b55e 78%,#c9a04e 100%);
+  --hero-gold:linear-gradient(105deg,#cfa95c 0%,#e3c477 18%,#f4da8a 38%,#f8e193 50%,#ecd083 66%,#d9b668 85%,#cfa85a 100%);
+}
+body{background:#121212;}
+.app-shell{background:#121212;box-shadow:none;padding-bottom:100px;}
+.ambient-glow{display:none;}
+.app-content{padding:18px 24px 20px;}
+.page-title{color:#fbeed5;font-size:1.15rem;}
+.text-gold{color:#e2c691!important;}
+.text-success{color:#f0d48a!important;}
+
+.gold-hero-card{
+  background:var(--hero-gold);color:#0a0604;
+  border:1.5px solid #ead29a;border-radius:24px;padding:22px 20px;
+  box-shadow:0 0 34px rgba(214,165,70,.32),0 14px 32px rgba(150,100,25,.30),inset 0 1px 1px rgba(255,255,255,.6);
+}
+.gold-hero-card::before{
+  background-image:repeating-linear-gradient(45deg,transparent 0 17px,rgba(255,255,255,.55) 17px 18px),repeating-linear-gradient(-45deg,transparent 0 17px,rgba(255,255,255,.55) 17px 18px);
+  background-size:auto;opacity:.5;
+  -webkit-mask-image:radial-gradient(circle at 100% 100%,#000 0,transparent 42%);
+  mask-image:radial-gradient(circle at 100% 100%,#000 0,transparent 42%);
+}
+.gold-hero-card::after{
+  content:"";position:absolute;top:6px;right:14px;width:28px;height:28px;pointer-events:none;z-index:2;
+  background:
+    linear-gradient(90deg,transparent,#fff 50%,transparent) center/100% 2px no-repeat,
+    linear-gradient(0deg,transparent,#fff 50%,transparent) center/2px 100% no-repeat,
+    radial-gradient(circle,rgba(255,244,200,.95) 0,transparent 55%);
+}
+
+.btn-gold{
+  background:var(--btn-gold);color:#141008;border:none;border-radius:14px;
+  box-shadow:0 8px 24px rgba(201,160,70,.35),inset 0 1px 1px rgba(255,255,255,.55);
+}
+.btn-gold:hover,.btn-gold:focus{color:#0e0a05;filter:brightness(1.06);}
+.btn-gold.py-3{padding-top:17px!important;padding-bottom:17px!important;font-size:1.02rem;}
+.btn-gold-outline{
+  background:#161514;color:#d9b878;border:1.5px solid #9b8764;border-radius:14px;
+}
+.btn-gold-outline:hover{background:#201e1b;color:#f0d48a;box-shadow:var(--gold-glow);}
+/* تم نهایی: قسمت ۲ */
+.luxury-card{
+  border:1.5px solid transparent;border-radius:20px;
+  background:var(--card-bg) padding-box,var(--card-stroke) border-box;
+  box-shadow:0 10px 28px rgba(0,0,0,.45);backdrop-filter:none;
+}
+.luxury-card.clickable:hover{
+  background:var(--card-bg) padding-box,var(--card-stroke) border-box;
+  filter:brightness(1.08);
+}
+.luxury-card.py-2{
+  background:#242223;border:1.5px solid #4f463c;border-radius:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,.4);
+}
+.luxury-card.py-2.clickable:hover{background:#2b2829;border-color:#8f7e5e;}
+
+.quick-action-box{
+  border-radius:16px;border:1.5px solid #bda97e;color:#f9e09a;
+  background:linear-gradient(180deg,#2a2519 0%,#1b1917 40%,#171514 100%);
+  box-shadow:0 0 14px rgba(214,165,70,.18),inset 0 1px 0 rgba(255,236,170,.25);
+}
+.quick-action span{color:#a39a8d;}
+.icon-btn{
+  border:1.5px solid #bda97e;color:#f9e09a;border-radius:14px;
+  background:linear-gradient(180deg,#2a2519,#171514);
+}
+
+.pill-btn{background:#131312;border:1.5px solid #6e6254;color:#a39a8d;}
+.pill-btn.active{
+  background:var(--gold-gradient);color:#16130d;border-color:#f0d78e;
+  box-shadow:0 0 16px rgba(226,195,122,.45);
+}
+.trade-toggle{background:#262425;border:1.5px solid #8a7a5e;}
+.luxury-input{
+  background:#272424!important;border:1.5px solid #7a6b5c!important;border-radius:14px!important;
+}
+.badge-profit{
+  background:rgba(0,0,0,.35);color:#9acd5b;border:1px solid rgba(154,205,91,.35);
+}
+.badge-gold-soft{background:rgba(226,195,122,.14);color:#ecd7af;border:1px solid #8a7a5e;}
+
+.bottom-nav{
+  background:#181818;border-top:1.5px solid #32312e;backdrop-filter:none;
+  padding:12px 6px 14px;
+}
+.nav-item-btn{color:#857e76;}
+.nav-item-btn i{color:#8a8379;}
+.nav-item-btn.active{color:#ecd7af;}
+.nav-item-btn.active i{color:#f9e09a;filter:drop-shadow(0 0 6px rgba(249,224,154,.55));}
+.nav-item-btn.active::before{
+  top:-12px;width:56px;height:3px;
+  background:linear-gradient(90deg,#e9d09e,#eace90,#e6cc8f);
+  box-shadow:0 2px 10px rgba(234,206,144,.7);
+}
