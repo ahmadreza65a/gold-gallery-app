@@ -6,7 +6,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 WWW="$ROOT/app/src/main/assets/www"
 LIBS="$WWW/libs"
-TMP="$ROOT/.npm-tmp"
+TMP="$ROOT/webtmp"
 
 rm -rf "$TMP" "$LIBS"
 mkdir -p "$TMP" "$LIBS/bootstrap-icons/fonts" "$LIBS/vazirmatn"
